@@ -1,10 +1,10 @@
 "use client";
-
+import '../styles/header.css';
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import Link from 'next/link';
 import Image from 'next/image';
 
-import Logo from '../assets/img/logo.png'
+import Logo from '../assets/img/logo.png';
 
 const Header = () => {
 	const [isHeaderFixed, setIsHeaderFixed] = useState(false);
@@ -24,10 +24,10 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className={`header w-screen flex justify-center ${isHeaderFixed ? 'fixed' : 'absolute'}`}>
-			<div className={`flex justify-between items-center w-full max-w-[1300px] px-[20px] ${isHeaderFixed ? '' : 'pt-[20px]'}`}>
+		<header className={`header w-screen flex justify-center bg-white z-50 ${isHeaderFixed ? 'fixed shadow-sm' : 'absolute'}`}>
+			<div className={`flex justify-between items-center container py-[20px]`}>
 				<div className="lg:basis-4/6">
-					<div className="header__nav h-full flex justify-center items-center md:gap-3 xl:gap-5 text-sm">
+					<div className="header__nav h-full flex items-center md:gap-3 xl:gap-8 text-sm">
 						<Link
 							href="home"
 							className="header__nav__item cursor-pointer flex items-center">
@@ -51,8 +51,8 @@ const Header = () => {
 					</div>
 				</div>
 				<div className="lg:basis-2/6">
-					<Link href="/" className="header__logo cursor-pointer">
-						<Image src={Logo} alt="Moyado" className='w-[138px]' />
+					<Link href="/" className="header__logo cursor-pointer h-[60px]">
+						<Image src={Logo} alt="Moyado" className='w-[138px] mx-auto' />
 					</Link>
 				</div>
 				<div className="lg:basis-4/6">

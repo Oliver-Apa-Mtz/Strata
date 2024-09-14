@@ -2,19 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./fonts/Montserrat-Regular.ttf') format('ttf');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fahkwang Regular';
+	src: url('./fonts/Fahkwang-Regular.woff') format('woff');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fahkwang Medium';
+	src: url('./fonts/Fahkwang-Medium.woff') format('woff');
+	font-weight: 500;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Fahkwang Bold';
+	src: url('./fonts/Fahkwang-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-display: swap;
+}
+
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+	--white: #ffffff;
+	--black: #171717;
+	--primary-color: #223840;
+	--secondary-color: #4E5B60;
+	--bg-primary: #E5B789;
+	--bg-secondary: #2C4C59;
+	--bg-footer: rgba(248, 230, 218,.45);
+	--custom: #E8D7CC;
+	--gray: #C0C6C6;
 }
 
 body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: Arial, Helvetica, sans-serif;
+	color: var(--black);
+	background: var(--white);
 }
 
-@layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
+.container{
+	width: 100%;
+	max-width: 1360px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.button{
+	border-radius: 28px;
+	padding: 16px 30px;
+	font-size: 15px;
+	font-family: 'Fahkwang Medium', sans-serif;
+	color: var(--white);
+}
+.button--primary{
+	background: var(--bg-primary);
+}
+.button--primary:hover{
+	background: var(--primary-color);
+}
+.button--secondary{
+	background: var(--primary-color);
+}
+.button--secondary:hover {
+	background: var(--bg-primary);
 }

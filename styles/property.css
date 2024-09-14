@@ -1,0 +1,47 @@
+.property{
+	max-width: 433px;
+}
+.property__image{
+	background-size: cover;
+	background-position: center;
+	min-height: 433px;
+}
+.property__type{
+	min-width: 145px;
+	padding: 0 10px;
+	background-color: #FAEDE5;
+	left: 0;
+	top: 40px;
+	font-family: 'Fahkwang Bold', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: var(--primary-color);
+	text-transform: uppercase;
+}
+.property__price{
+	width: 265px;
+	background-color: #FAEDE5;
+	bottom: -13px;
+	left: calc(50% - 132.5px);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--primary-color);
+	font-weight: 300;
+}
+.property__title{
+	font-family: 'Fahkwang Bold', sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+	color: var(--primary-color);
+}
+.property__info{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 21px;
+	color: var(--primary-color);
+	font-weight: 300;
+}
+.property--line{
+	border-right: 1px solid var(--primary-color);
+}

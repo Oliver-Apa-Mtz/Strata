@@ -1,0 +1,9 @@
+.header__nav__item{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: var(--secondary-color);
+	border-bottom: 1px solid transparent;
+}
+.header__nav__item:hover {
+	border-color: var(--secondary-color);
+}

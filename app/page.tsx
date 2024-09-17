@@ -8,6 +8,7 @@ import BannerEffect1 from '../assets/img/line-effect-1.webp';
 import ImageBanner1 from '../assets/img/image-post-1.webp';
 import LogoAmpi from '../assets/img/icono-ampi.svg';
 import BannerCall1 from '../assets/img/banner-call-1.webp';
+import Mapa from '../assets/img/map.webp';
 
 //Propiedades
 import Property1 from '../assets/img/property-1.webp';
@@ -16,6 +17,19 @@ import Property3 from '../assets/img/property-3.webp';
 import Property4 from '../assets/img/property-4.webp';
 import Property5 from '../assets/img/property-5.webp';
 import Property6 from '../assets/img/property-6.webp';
+
+//Propiedades simples
+import Property7 from '../assets/img/property-7.webp';
+import Property8 from '../assets/img/property-8.webp';
+import Property9 from '../assets/img/property-9.webp';
+import Property10 from '../assets/img/property-10.webp';
+import Property11 from '../assets/img/property-11.webp';
+import Property12 from '../assets/img/property-12.webp';
+
+//Socios
+import LogoSocio1 from '../assets/img/logo-socio-1.svg';
+import LogoSocio2 from '../assets/img/logo-socio-2.svg';
+import LogoSocio3 from '../assets/img/logo-socio-3.svg';
 
 export default function Home() {
 	return (
@@ -72,7 +86,7 @@ export default function Home() {
 
 			<div className='banner-data py-20'>
 				<div className='container'>
-					<div className='banner-data__text text-center'>
+					<div className='text-center'>
 						<p className='banner-info__text__subtitle mb-6'>
 							Nos enorgullece contribuir al crecimiento del sector inmobiliario
 							en Mazatlán, ofreciendo propiedades que cumplen con los más altos
@@ -82,7 +96,7 @@ export default function Home() {
 						</p>
 						<p className='banner-info__text__title mt-10 mb-12'>Propiedades</p>
 					</div>
-					<div className='banner-data__container w-full p-6 flex gap-2 flex-wrap justify-between'>
+					<div className='bg-white w-full p-6 flex gap-2 flex-wrap justify-between'>
 						<div className='banner-data__item mb-6'>
 							<PropertyItem
 								image={Property1}
@@ -152,6 +166,107 @@ export default function Home() {
 					</div>
 					<div className='pt-20'>
 						<Button text='Contáctanos' type='secondary' position='center' />
+					</div>
+				</div>
+			</div>
+
+			<div className='banner-gray py-20'>
+				<div className='container'>
+					<div className='text-center'>
+						<p className='banner-info__text__title mt-10 mb-12'>Socios</p>
+					</div>
+					<div className='flex justify-center gap-40'>
+						<Image src={LogoSocio1} alt="" className='' />
+						<Image src={LogoSocio2} alt="" className='' />
+						<Image src={LogoSocio3} alt="" className='' />
+					</div>
+				</div>
+			</div>
+
+			<div className='bg-white py-10'>
+				<div className='container'>
+					<div className='text-center'>
+						<p className='banner-info__text__title mt-10 mb-12'>Propiedades</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="banner-map">
+				<Image src={Mapa} alt="" className='' />
+			</div>
+
+			<div className='banner-gray py-20'>
+				<div className='container'>
+					<div className='text-center'>
+						<p className='banner-info__text__title mb-12'>
+							Zona de desarrollos
+						</p>
+						<p className='banner-info__text__subtitle mb-6'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Sed eleifend mi in ante tempor placerat. Integer ut mi
+							eget risus congue pharetra a eget nisi.
+						</p>
+					</div>
+					<div className='w-full p-6 flex gap-2 flex-wrap justify-between'>
+						<div className='banner-data__item mb-6'>
+							<PropertyItem
+								image={Property7}
+								zone={'Centro'}
+								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+							/>
+						</div>
+						<div className='banner-data__item mb-6'>
+							<PropertyItem
+								image={Property8}
+								zone={'Puerto'}
+								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+							/>
+						</div>
+						<div className='banner-data__item mb-6'>
+							<PropertyItem
+								image={Property9}
+								zone={'Norte'}
+								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+							/>
+						</div>
+						<div className='banner-data__item mb-6'>
+							<PropertyItem
+								image={Property10}
+								zone={'Sur'}
+								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+							/>
+						</div>
+						<div className='banner-data__item mb-6'>
+							<PropertyItem
+								image={Property11}
+								zone={'Zona comercial'}
+								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+							/>
+						</div>
+						<div className='banner-data__item mb-6'>
+							<PropertyItem
+								image={Property12}
+								zone={'Alrededores'}
+								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className='bg-white py-10'>
+				<div className='container'>
+					<div className='banner__text text-center mx-auto'>
+						<p className='banner-info__text__title mt-10 mb-12'>
+							Vea lo que dicen nuestros clientes
+						</p>
+					</div>
+					<div className='banner__text banner__text--large text-center mx-auto'>
+						<p className='banner-info__text__subtitle mb-6'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Etiam id fermentum arcu. Nulla facilisi. Nulla in viverra
+							risus, in iaculis lectus. Nulla ut nibh ut sapien dapibus auctor.
+						</p>
 					</div>
 				</div>
 			</div>

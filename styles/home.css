@@ -2,13 +2,20 @@
 	background-image: url('../assets/img/banner-home.png');
 	height: 900px;
 }
-#home, .banner-info__images__item--custom, .banner-call, .banner-data {
+#agente{
+	background-image: url('../assets/img/banner-agente.webp');
+	height: 900px;
+}
+#home, #agente, .banner-info__images__item--custom, .banner-call, .banner-data, .banner-info--custom, .banner-line {
 	background-size: cover;
 	background-position: center;
 }
 .banner__text{
 	width: 100%;
 	max-width: 520px;
+}
+.banner__text--large {
+	max-width: 750px;
 }
 .title-ppal{
 	font-family: 'Fahkwang Medium', sans-serif;
@@ -26,9 +33,18 @@
 	background-color: var(--bg-footer);
 	padding: 80px 0;
 }
+.banner-info--custom{
+	background-image: url('../assets/img/line-effect-3.webp');
+	padding-top: 100px;
+	padding-bottom: 80px;
+	min-height: 840px;
+}
 .banner-info__text{
 	max-width: 520px;
 	padding-top: 50px;
+}
+.banner-info__text--large {
+	max-width: 680px;
 }
 .banner-info__text__title, .banner-info__text__subtitle, .banner-info__text__custom {
 	font-family: 'Fahkwang Medium', sans-serif;
@@ -79,12 +95,58 @@
 .banner-call__text{
 	max-width: 935px;
 }
+.banner-call__text_info{
+	font-family: 'Fahkwang Regular', sans-serif;
+	font-size: 23px;
+	line-height: 30px;
+	color: var(--white);
+}
 .banner-data{
 	background-image: url('../assets/img/line-effect-2.webp');
 }
-.banner-data__container{
-	background-color: var(--white);
-}
 .banner-data__item{
 	width: 32%;
+}
+.banner-gray{
+	background-color: var(--bg-footer);
+}
+.banner-blue{
+	background-color: var(--primary-color);
+}
+.banner-blue__title{
+	font-family: 'Fahkwang Regular', sans-serif;
+	font-size: 55px;
+	line-height: 62px;
+	color: var(--white);
+}
+.banner-blue__info{
+	font-family: 'Fahkwang Regular', sans-serif;
+	font-size: 29px;
+	line-height: 35px;
+	color: var(--white);
+	width: 400px;
+	margin: 20px auto 0;
+}
+.banner-blue__container{
+	max-width: 854px;
+}
+.banner-blue__subtitle {
+	font-family: 'Fahkwang Regular', sans-serif;
+	font-size: 23px;
+	line-height: 28px;
+	color: var(--white);
+}
+.banner-blue__text{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--white);
+	font-weight: 300;
+	margin-top: 50px;
+}
+.banner-blue__text span{
+	font-weight: 700;
+}
+.banner-line{
+	background-image: url('../assets/img/line-effect-4.webp');
 }

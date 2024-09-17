@@ -5,6 +5,10 @@ import Image from 'next/image';
 
 import Logo from '../assets/img/logo-footer.webp';
 import IconoPhone from '../assets/img/icono-phone-footer.webp';
+import IconoFacebook from '../assets/img/icono-facebook.webp';
+import IconoInstagram from '../assets/img/icono-instagram.webp';
+import IconoTwitter from '../assets/img/icono-twitter.webp';
+import IconoWhats from '../assets/img/icono-whatsapp.webp';
 
 const Footer = () => {
 	return (
@@ -75,14 +79,22 @@ const Footer = () => {
 					</Link>
 				</div>
 				<div className="footer__social w-full flex items-center justify-between mx-auto mb-20">
-					<div className="footer__social__item"></div>
-					<div className="footer__social__item"></div>
-					<div className="footer__social__item"></div>
-					<div className="footer__social__item"></div>
+					<div className="footer__social__item flex items-center justify-center">
+						<Image src={IconoFacebook} alt="" className='w-[14px]' />
+					</div>
+					<div className="footer__social__item flex items-center justify-center">
+						<Image src={IconoWhats} alt="" className='w-[20px]' />
+					</div>
+					<div className="footer__social__item flex items-center justify-center">
+						<Image src={IconoTwitter} alt="" className='w-[20px]' />
+					</div>
+					<div className="footer__social__item flex items-center justify-center">
+						<Image src={IconoInstagram} alt="" className='w-[20px]' />
+					</div>
 				</div>
 				<div className="text-center">
 					<Link href="/" className="header__logo cursor-pointer">
-						<Image src={Logo} alt="Moyado" className='w-[70px] mx-auto' />
+						<Image src={Logo} alt="" className='w-[70px] mx-auto' />
 					</Link>
 					<p className="footer__privacy mt-4">Property by strata © Copyrights 2024</p>
 				</div>

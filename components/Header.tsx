@@ -29,22 +29,22 @@ const Header = () => {
 				<div className="lg:basis-4/6">
 					<div className="header__nav h-full flex items-center md:gap-3 xl:gap-8 text-sm">
 						<Link
-							href="home"
+							href="nosotros"
 							className="header__nav__item cursor-pointer flex items-center">
 							Nosotros
 						</Link>
 						<Link
-							href="home"
+							href="propiedades"
 							className="header__nav__item cursor-pointer flex items-center">
 							Propiedades
 						</Link>
 						<Link
-							href="home"
+							href="agentes"
 							className="header__nav__item cursor-pointer flex items-center">
 							Socios
 						</Link>
 						<Link
-							href="home"
+							href="contacto"
 							className="header__nav__item cursor-pointer flex items-center">
 							Contacto
 						</Link>

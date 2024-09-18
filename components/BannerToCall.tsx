@@ -9,7 +9,7 @@ interface IProps {
 const BannerToCall = ({ bgImage, image, bgColor, title, info }: IProps) => {
 	return (
 		<div className="banner-call" style={{ backgroundImage: `url(${image.src})` }}>
-			<div className="container py-40">
+			<div className="container lg:py-40 py-20">
 				<div className="banner-call__text mx-auto text-center">
 					<p className='title-ppal'>{title}</p>
 					{info && (

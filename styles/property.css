@@ -51,3 +51,12 @@
 .property--line{
 	border-right: 1px solid var(--primary-color);
 }
+
+@media only screen and (max-width: 639px) {
+	.property{
+		margin: 0 auto;
+	}
+	.property__image{
+		min-height: 350px;
+	}
+}

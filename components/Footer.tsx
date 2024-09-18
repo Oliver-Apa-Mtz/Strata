@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 import Logo from '../assets/img/logo-footer.webp';
 import IconoPhone from '../assets/img/icono-phone-footer.webp';
+import IconoPin from '../assets/img/icono-pin-footer.webp';
+import IconoCall from '../assets/img/icono-call-footer.webp';
 import IconoFacebook from '../assets/img/icono-facebook.webp';
 import IconoInstagram from '../assets/img/icono-instagram.webp';
 import IconoTwitter from '../assets/img/icono-twitter.webp';
@@ -19,11 +21,11 @@ const Footer = () => {
 				</div>
 			</div>
 
-			<div className={`flex justify-between items-center container`}>
-				<div className="lg:basis-1/3">
+			<div className={`flex justify-between items-center container lg:flex-nowrap flex-wrap`}>
+				<div className="lg:basis-1/3 basis-full">
 					<div className="footer__item flex items-center">
-						<div className="flex footer__item__container">
-							<Image src={IconoPhone} alt="Moyado" className='w-[70px] mr-5' />
+						<div className="flex footer__item__container lg:items-start items-center w-full">
+							<Image src={IconoPhone} alt="Moyado" className='w-[70px] mr-5 h-max' />
 							<div>
 								<p className='footer__item__text'>Telefono</p>
 								<a href="" className='footer__item__link'>669 138 8434</a>
@@ -31,10 +33,10 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="lg:basis-1/3">
+				<div className="lg:basis-1/3 basis-full">
 					<div className="footer__item footer__item--custom flex items-center justify-center">
-						<div className="flex items-center footer__item__container">
-							<Image src={IconoPhone} alt="Moyado" className='w-[70px] mr-5' />
+						<div className="flex items-center footer__item__container w-full">
+							<Image src={IconoPin} alt="Moyado" className='w-[70px] mr-5 h-max' />
 							<div>
 								<p className='footer__item__text'>Localización</p>
 								<a href="" className='footer__item__link'>Avenida Doctor Carlos Canseco. 6000-6 82133. Mazatlán, Sinaloa.</a>
@@ -42,10 +44,10 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="lg:basis-1/3">
-					<div className="footer__item flex items-center justify-end">
-						<div className="flex footer__item__container">
-							<Image src={IconoPhone} alt="Moyado" className='w-[70px] mr-5' />
+				<div className="lg:basis-1/3 basis-full">
+					<div className="footer__item flex items-center lg:justify-end">
+						<div className="flex footer__item__container lg:items-start items-center w-full">
+							<Image src={IconoCall} alt="Moyado" className='w-[70px] mr-5 h-max' />
 							<div>
 								<p className='footer__item__text'>Servicio al cliente</p>
 								<a href="" className='footer__item__link'>contacto@propertybystrata.com</a>
@@ -56,7 +58,7 @@ const Footer = () => {
 			</div>
 
 			<div>
-				<div className="footer__nav w-full flex items-center md:gap-3 xl:gap-8 mx-auto">
+				<div className="footer__nav w-full sm:flex items-center justify-center gap-3 xl:gap-8 mx-auto">
 					<Link
 						href="home"
 						className="footer__nav__item cursor-pointer flex items-center">
@@ -78,7 +80,7 @@ const Footer = () => {
 						Contacto
 					</Link>
 				</div>
-				<div className="footer__social w-full flex items-center justify-between mx-auto mb-20">
+				<div className="footer__social w-full flex items-center justify-between mx-auto lg:mb-20 mb-10">
 					<div className="footer__social__item flex items-center justify-center">
 						<Image src={IconoFacebook} alt="" className='w-[14px]' />
 					</div>

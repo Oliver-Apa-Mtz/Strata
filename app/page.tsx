@@ -33,8 +33,8 @@ import LogoSocio3 from '../assets/img/logo-socio-3.svg';
 
 export default function Home() {
 	return (
-		<div>
-			<div id="home" className="banner-ppal w-screen h-[850px]">
+		<div className='lg:pt-[100px] pt-[80px]'>
+			<div id="home" className="banner-ppal w-screen">
 				<div className="container h-full flex items-center gap-4">
 					<div className="banner__text w-full">
 						<h1 className="mb-10 title-ppal">
@@ -49,8 +49,8 @@ export default function Home() {
 			</div>
 
 			<div className='banner-info relative'>
-				<div className='container flex justify-between'>
-					<div className='banner-info__text basis-1/2'>
+				<div className='container flex justify-between lg:flex-nowrap flex-wrap'>
+					<div className='banner-info__text lg:basis-1/2 basis-full'>
 						<p className='banner-info__text__custom'>Quiénes Somos</p>
 						<p className='banner-info__text__title my-6'>Nosotros</p>
 						<p className='banner-info__text__subtitle mb-6'>
@@ -66,7 +66,7 @@ export default function Home() {
 							actualizados con las últimas tendencias y regulaciones, asegurando la
 							confianza y seguridad en las inversiones de nuestros clientes.
 						</p>
-						<div className='banner-info__icono flex items-center mt-6 mb-12'>
+						<div className='banner-info__icono flex items-center justify-center lg:justify-start mt-6 mb-12'>
 							<Image src={LogoAmpi} alt="" className='banner-info__icono__image' />
 							<p className='banner-info__icono__text'>
 								Miembros de la Asociación Mexicana de Profesionales Inmobiliarios (AMPI)
@@ -74,12 +74,12 @@ export default function Home() {
 						</div>
 						<Button text='Contáctanos' type='secondary' position='left' />
 					</div>
-					<div className='banner-info__images basis-1/2 relative z-10 flex justify-end'>
+					<div className='banner-info__images lg:basis-1/2 basis-full relative z-10 flex lg:justify-end justify-center pt-10 lg:pt-0'>
 						<Image src={ImageBanner1} alt="" className='banner-info__images__item' />
 						<div className='banner-info__images__item--custom'></div>
 					</div>
 				</div>
-				<Image src={BannerEffect1} alt="" className='h-full absolute top-0 right-0 -z-1' />
+				<Image src={BannerEffect1} alt="" className='h-full absolute top-0 right-0 -z-1 lg:block hidden' />
 			</div>
 
 			<BannerToCall bgImage={true} image={BannerCall1} title={'Nuestro compromiso con la calidad y la satisfacción del cliente es el núcleo de todo lo que hacemos.'} />
@@ -170,15 +170,15 @@ export default function Home() {
 				</div>
 			</div>
 
-			<div className='banner-gray py-20'>
+			<div className='banner-gray lg:py-20 py-10'>
 				<div className='container'>
 					<div className='text-center'>
 						<p className='banner-info__text__title mt-10 mb-12'>Socios</p>
 					</div>
-					<div className='flex justify-center gap-40'>
-						<Image src={LogoSocio1} alt="" className='' />
-						<Image src={LogoSocio2} alt="" className='' />
-						<Image src={LogoSocio3} alt="" className='' />
+					<div className='sm:flex block justify-center lg:gap-40 sm:gap-10'>
+						<Image src={LogoSocio1} alt="" className='banner-gray__logo' />
+						<Image src={LogoSocio2} alt="" className='banner-gray__logo' />
+						<Image src={LogoSocio3} alt="" className='banner-gray__logo' />
 					</div>
 				</div>
 			</div>
@@ -186,7 +186,7 @@ export default function Home() {
 			<div className='bg-white py-10'>
 				<div className='container'>
 					<div className='text-center'>
-						<p className='banner-info__text__title mt-10 mb-12'>Propiedades</p>
+						<p className='banner-info__text__title lg:mt-10 lg:mb-12'>Propiedades</p>
 					</div>
 				</div>
 			</div>

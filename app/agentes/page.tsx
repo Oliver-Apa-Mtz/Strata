@@ -10,7 +10,7 @@ import Equipo6 from '../../assets/img/equipo-6.webp';
 
 const Agentes = () => {
 	return (
-		<div>
+		<div className='lg:pt-[100px] pt-[80px]'>
 			<div id="agente" className="banner-ppal w-screen h-[850px]">
 				<div className="container h-full flex items-center gap-4">
 					<div className="banner__text w-full">

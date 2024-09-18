@@ -57,16 +57,19 @@ body {
 	font-size: 15px;
 	font-family: 'Fahkwang Medium', sans-serif;
 	color: var(--white);
+	transition: all .2s linear;
 }
 .button--primary{
 	background: var(--bg-primary);
 }
 .button--primary:hover{
 	background: var(--primary-color);
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, .2);
 }
 .button--secondary{
 	background: var(--primary-color);
 }
 .button--secondary:hover {
 	background: var(--bg-primary);
+	box-shadow: 0px 3px 6px rgba(0,0,0,.2);
 }

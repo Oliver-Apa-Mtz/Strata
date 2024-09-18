@@ -24,10 +24,10 @@ import Equipo6 from '../../assets/img/equipo-6.webp';
 
 const Nosotros = () => {
 	return (
-		<div>
+		<div className='lg:pt-[100px] pt-[80px]'>
 			<div className='banner-info--custom relative'>
-				<div className='container h-[660px] flex justify-between items-center'>
-					<div className='banner-info__text basis-7/12'>
+				<div className='container xl:h-[660px] flex justify-between items-center'>
+					<div className='banner-info__text lg:basis-7/12 basis-full lg:mb-0 mb-10'>
 						<p className='banner-info__text__custom'>Historia de Strata</p>
 						<p className='banner-info__text__title my-6'>Nosotros</p>
 						<p className='banner-info__text__subtitle mb-6'>
@@ -41,10 +41,10 @@ const Nosotros = () => {
 							mercado local.
 						</p>
 					</div>
-					<div className='banner-info__images basis-5/12 relative'>
+					<div className='banner-info__images lg:basis-5/12 relative basis-full lg:block hidden'>
 					</div>
 				</div>
-				<Image src={ImageBanner1} alt="" className='w-[795px] absolute top-0 right-0 -z-1' />
+				<Image src={ImageBanner1} alt="" className='xl:h-[780px] lg:h-[500px] lg:w-max md:w-[50%] w-[80%] lg:absolute relative lg:top-0 lg:right-0 -z-1 mx-auto' />
 			</div>
 
 			<BannerToCall
@@ -57,7 +57,7 @@ const Nosotros = () => {
 			<div className='banner-data py-20'>
 				<div className='container'>
 					<div className='text-center'>
-						<Image src={LogoAmpi} alt="" className='banner-info__icono__image mx-auto mb-10' />
+						<Image src={LogoAmpi} alt="" className='banner-info__icono__image mx-auto mb-10 md:w-max w-[100px]' />
 						<p className='banner-info__text__title mb-12'>
 							Miembros de la Asociación Mexicana de Profesionales Inmobiliarios
 						</p>
@@ -69,18 +69,18 @@ const Nosotros = () => {
 							la confianza y seguridad en sus inversiones.
 						</p>
 					</div>
-					<div className='w-full p-6 flex gap-2 flex-wrap justify-between'>
-						<div className='banner-data__item mb-6'>
+					<div className='w-full p-6 flex lg:gap-2 gap-10 flex-wrap lg:justify-between justify-center'>
+						<div className='banner-data__item lg:mb-6'>
 							<PropertyItem
 								image={Property1}
 							/>
 						</div>
-						<div className='banner-data__item mb-6'>
+						<div className='banner-data__item lg:mb-6'>
 							<PropertyItem
 								image={Property2}
 							/>
 						</div>
-						<div className='banner-data__item mb-6'>
+						<div className='banner-data__item lg:mb-6'>
 							<PropertyItem
 								image={Property3}
 							/>
@@ -89,27 +89,27 @@ const Nosotros = () => {
 				</div>
 			</div>
 
-			<div className='banner-blue py-20'>
+			<div className='banner-blue lg:py-20 py-10'>
 				<div className='container'>
 					<div className='text-center'>
-						<p className='banner-blue__title mb-32'>Contribuimos con:</p>
+						<p className='banner-blue__title lg:mb-32 mb-10'>Contribuimos con:</p>
 					</div>
-					<div className='flex justify-between gap-10'>
+					<div className='flex xl:justify-between justify-center gap-4 flex-wrap'>
 						<div className='text-center'>
-							<div className='h-[115px] flex items-start justify-center'>
-								<Image src={IconoBeneficio1} alt="" className='' />
+							<div className='sm:h-[115px] flex items-start justify-center'>
+								<Image src={IconoBeneficio1} alt="" className='banner-blue__image' />
 							</div>
 							<p className='banner-blue__info'>crecimiento del sector inmobiliario</p>
 						</div>
 						<div className='text-center'>
-							<div className='h-[115px] flex items-start justify-center'>
-								<Image src={IconoBeneficio2} alt="" className='' />
+							<div className='sm:h-[115px] flex items-start justify-center'>
+								<Image src={IconoBeneficio2} alt="" className='banner-blue__image' />
 							</div>
 							<p className='banner-blue__info'>propiedades exclusivas</p>
 						</div>
 						<div className='text-center'>
-							<div className='h-[115px] flex items-start justify-center'>
-								<Image src={IconoBeneficio3} alt="" className='' />
+							<div className='sm:h-[115px] flex items-start justify-center'>
+								<Image src={IconoBeneficio3} alt="" className='banner-blue__image' />
 							</div>
 							<p className='banner-blue__info'>más altos estándares de calidad y confort.</p>
 						</div>
@@ -118,11 +118,11 @@ const Nosotros = () => {
 			</div>
 
 			<div className='banner-data relative py-[90px]'>
-				<div className='container h-[660px] flex justify-between items-center'>
-					<div className='banner-info__images basis-5/12 relative'>
+				<div className='container xl:h-[591px] lg:h-[327px] flex justify-between items-center'>
+					<div className='banner-info__images basis-5/12 relative lg:block hidden'>
 					</div>
-					<div className='banner-info__text banner-info__text--large basis-7/12 text-right flex justify-end flex-wrap'>
-						<p className='banner-info__text__title mt-6 -mb-6'>Calidad y satisfacción</p>
+					<div className='banner-info__text banner-info__text--large basis-7/12 lg:text-right text-center lg:flex lg:justify-end flex-wrap lg:mb-0 mb-10'>
+						<p className='banner-info__text__title xl:mt-6 lg:-mt-16 -mt-8 lg:-mb-6 mb-6'>Calidad y satisfacción</p>
 						<div className='banner-info__text'>
 							<p className='banner-info__text__subtitle mb-6'>
 								Cada proyecto es una oportunidad para demostrar nuestro compromiso
@@ -136,13 +136,13 @@ const Nosotros = () => {
 						</div>
 					</div>
 				</div>
-				<Image src={ImageBanner1} alt="" className='w-[795px] absolute top-0 left-0 -z-1' />
+				<Image src={ImageBanner1} alt="" className='xl:w-[730px] lg:w-[480px] lg:h-max md:w-[50%] w-[80%] lg:absolute relative top-0 left-0 -z-1 mx-auto' />
 			</div>
 
 			<div className='banner-blue py-20'>
 				<div className='container'>
 					<div className='banner-blue__container mx-auto text-center'>
-						<p className='banner-blue__title mb-4'>Objetivo de Strata</p>
+						<p className='banner-blue__title mb-8'>Objetivo de Strata</p>
 						<p className='banner-blue__subtitle'>
 							En PropertyByStrata, nos dedicamos a ofrecer soluciones
 							inmobiliarias excepcionales en Mazatlán,

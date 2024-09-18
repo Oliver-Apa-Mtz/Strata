@@ -1,8 +1,14 @@
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
 import '../styles/home.css';
 import Button from '../components/Button';
-import BannerToCall from '../components/BannerToCall';
-import PropertyItem from '../components/PropertyItem';
-import Image from 'next/image';
+const BannerToCall = dynamic(() => import('../components/BannerToCall'), {
+	ssr: true,
+});
+const PropertyItem = dynamic(() => import('../components/PropertyItem'), {
+	ssr: true,
+});
 
 import BannerEffect1 from '../assets/img/line-effect-1.webp';
 import ImageBanner1 from '../assets/img/image-post-1.webp';
@@ -67,7 +73,7 @@ export default function Home() {
 							confianza y seguridad en las inversiones de nuestros clientes.
 						</p>
 						<div className='banner-info__icono flex items-center justify-center lg:justify-start mt-6 mb-12'>
-							<Image src={LogoAmpi} alt="" className='banner-info__icono__image' />
+							<Image src={LogoAmpi} alt="Logo AMPI" className='banner-info__icono__image' />
 							<p className='banner-info__icono__text'>
 								Miembros de la Asociación Mexicana de Profesionales Inmobiliarios (AMPI)
 							</p>
@@ -75,11 +81,11 @@ export default function Home() {
 						<Button text='Contáctanos' type='secondary' position='left' />
 					</div>
 					<div className='banner-info__images lg:basis-1/2 basis-full relative z-10 flex lg:justify-end justify-center pt-10 lg:pt-0'>
-						<Image src={ImageBanner1} alt="" className='banner-info__images__item' />
+						<Image src={ImageBanner1} alt="Nos especializamos en la comercialización de proyectos exclusivos y en la administración de propiedades con fines de renta vacacional." className='banner-info__images__item' />
 						<div className='banner-info__images__item--custom'></div>
 					</div>
 				</div>
-				<Image src={BannerEffect1} alt="" className='h-full absolute top-0 right-0 -z-1 lg:block hidden' />
+				<Image src={BannerEffect1} alt="Quiénes Somos" className='h-full absolute top-0 right-0 -z-1 lg:block hidden' />
 			</div>
 
 			<BannerToCall bgImage={true} image={BannerCall1} title={'Nuestro compromiso con la calidad y la satisfacción del cliente es el núcleo de todo lo que hacemos.'} />
@@ -176,9 +182,9 @@ export default function Home() {
 						<p className='banner-info__text__title mt-10 mb-12'>Socios</p>
 					</div>
 					<div className='sm:flex block justify-center lg:gap-40 sm:gap-10'>
-						<Image src={LogoSocio1} alt="" className='banner-gray__logo' />
-						<Image src={LogoSocio2} alt="" className='banner-gray__logo' />
-						<Image src={LogoSocio3} alt="" className='banner-gray__logo' />
+						<Image src={LogoSocio1} alt="Logo Taller del Ladrillo" className='banner-gray__logo' />
+						<Image src={LogoSocio2} alt="Logo El Encanto Desarrollos" className='banner-gray__logo' />
+						<Image src={LogoSocio3} alt="Logo Hersa Corporativo" className='banner-gray__logo' />
 					</div>
 				</div>
 			</div>
@@ -192,7 +198,7 @@ export default function Home() {
 			</div>
 
 			<div className="banner-map">
-				<Image src={Mapa} alt="" className='' />
+				<Image src={Mapa} alt="Ubica nuestras propiedades" className='' />
 			</div>
 
 			<div className='banner-gray py-20'>

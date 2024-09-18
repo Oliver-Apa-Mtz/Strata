@@ -1,4 +1,6 @@
+"use client";
 import '../styles/property.css';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 import IconStart from '../assets/img/star.svg';
@@ -15,8 +17,13 @@ interface IProp {
 }
 
 const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone }: IProp) => {
+	const router = useRouter();
+	const handleProductClick = (id: number) => {
+		router.push(`/propiedad/${id}`);
+	};
+
 	return (
-		<div className='property w-full'>
+		<div className='property w-full' onClick={() => handleProductClick(1)}>
 			<div className='property__image relative' style={{ backgroundImage: `url(${image.src})` }}>
 				{type && (
 					<div className='property__type absolute text-center'>
@@ -44,11 +51,11 @@ const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone 
 				{rooms && bathrooms && (
 					<div className='flex text-center'>
 						<div className='basis-1/2 flex items-center justify-center property--line'>
-							<Image src={IconStart} alt="" className='banner-info__icono__image' />
+							<Image src={IconStart} alt="Icono recamaras" className='banner-info__icono__image' />
 							<p className='property__info'>{rooms} Recamaras</p>
 						</div>
 						<div className='basis-1/2 flex items-center justify-center'>
-							<Image src={IconStart} alt="" className='banner-info__icono__image' />
+							<Image src={IconStart} alt="Icono baños" className='banner-info__icono__image' />
 							<p className='property__info'>{bathrooms} Baños</p>
 						</div>
 					</div>

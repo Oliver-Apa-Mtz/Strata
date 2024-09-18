@@ -1,7 +1,11 @@
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
 import '../../styles/home.css';
 import '../../styles/footer.css';
-import Image from 'next/image';
-import Form from '../../components/Form';
+const Form = dynamic(() => import('../../components/Form'), {
+	ssr: false,
+});
 
 import ImageBanner1 from '../../assets/img/mapa-small.webp';
 import IconoPhone from '../../assets/img/icono-phone-footer.webp';
@@ -25,7 +29,7 @@ const Contacto = () => {
 						<p className='banner-info__text__title lg:text-left text-center lg:mb-0 mb-10'>Cómo encontrarnos</p>
 						<div className='banner-info__text'>
 							<div className="flex footer__item__container--large lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
-								<Image src={IconoPhone} alt="Moyado" className='w-[70px] h-max lg:mr-5 mx-auto' />
+								<Image src={IconoPhone} alt="Contáctanos" className='w-[70px] h-max lg:mr-5 mx-auto' />
 								<div className='w-full'>
 									<p className='footer__item__text'>Contáctanos</p>
 									<a href="" className='footer__item__link block'>Teléfono: 669 138 8434</a>
@@ -33,14 +37,14 @@ const Contacto = () => {
 								</div>
 							</div>
 							<div className="flex items-center footer__item__container--large footer__item__container--line lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
-								<Image src={IconoPin} alt="Moyado" className='w-[70px] h-max lg:mr-5 mx-auto' />
+								<Image src={IconoPin} alt="Localización" className='w-[70px] h-max lg:mr-5 mx-auto' />
 								<div className='w-full'>
 									<p className='footer__item__text'>Localización</p>
 									<a href="" className='footer__item__link'>Avenida Doctor Carlos Canseco. 6000-6 82133. Mazatlán, Sinaloa.</a>
 								</div>
 							</div>
 							<div className="flex footer__item__container--large lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
-								<Image src={IconoCall} alt="Moyado" className='w-[70px] h-max lg:mr-5 mx-auto' />
+								<Image src={IconoCall} alt="Servicio al cliente" className='w-[70px] h-max lg:mr-5 mx-auto' />
 								<div className='w-full'>
 									<p className='footer__item__text'>Servicio al cliente</p>
 									<a href="" className='footer__item__link'>contacto@propertybystrata.com</a>
@@ -49,7 +53,7 @@ const Contacto = () => {
 						</div>
 					</div>
 					<div className='banner-info__images lg:basis-1/2 basis-full lg:mt-0 mt-10'>
-						<Image src={ImageBanner1} alt="" className='banner-info__images__item lg:mx-0 mx-auto' />
+						<Image src={ImageBanner1} alt="Cómo encontrarnos" className='banner-info__images__item lg:mx-0 mx-auto' />
 					</div>
 				</div>
 				<Form />

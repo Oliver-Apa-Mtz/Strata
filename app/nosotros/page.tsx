@@ -1,7 +1,13 @@
-import '../../styles/home.css';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import BannerToCall from '../../components/BannerToCall';
-import PropertyItem from '../../components/PropertyItem';
+
+import '../../styles/home.css';
+const BannerToCall = dynamic(() => import('../../components/BannerToCall'), {
+	ssr: true,
+});
+const PropertyItem = dynamic(() => import('../../components/PropertyItem'), {
+	ssr: true,
+});
 
 import BannerCall1 from '../../assets/img/banner-call-2.webp';
 import ImageBanner1 from '../../assets/img/image-post-3.webp';
@@ -44,7 +50,7 @@ const Nosotros = () => {
 					<div className='banner-info__images lg:basis-5/12 relative basis-full lg:block hidden'>
 					</div>
 				</div>
-				<Image src={ImageBanner1} alt="" className='xl:h-[780px] lg:h-[500px] lg:w-max md:w-[50%] w-[80%] lg:absolute relative lg:top-0 lg:right-0 -z-1 mx-auto' />
+				<Image src={ImageBanner1} alt="Fundada en 2023, Strata nace con el objetivo de ofrecer soluciones inmobiliarias excepcionales en Mazatlán, Sinaloa." className='xl:h-[780px] lg:h-[500px] lg:w-max md:w-[50%] w-[80%] lg:absolute relative lg:top-0 lg:right-0 -z-1 mx-auto' />
 			</div>
 
 			<BannerToCall
@@ -57,7 +63,7 @@ const Nosotros = () => {
 			<div className='banner-data py-20'>
 				<div className='container'>
 					<div className='text-center'>
-						<Image src={LogoAmpi} alt="" className='banner-info__icono__image mx-auto mb-10 md:w-max w-[100px]' />
+						<Image src={LogoAmpi} alt="Logo AMPI" className='banner-info__icono__image mx-auto mb-10 md:w-max w-[100px]' />
 						<p className='banner-info__text__title mb-12'>
 							Miembros de la Asociación Mexicana de Profesionales Inmobiliarios
 						</p>
@@ -97,19 +103,19 @@ const Nosotros = () => {
 					<div className='flex xl:justify-between justify-center gap-4 flex-wrap'>
 						<div className='text-center'>
 							<div className='sm:h-[115px] flex items-start justify-center'>
-								<Image src={IconoBeneficio1} alt="" className='banner-blue__image' />
+								<Image src={IconoBeneficio1} alt="crecimiento del sector inmobiliario" className='banner-blue__image' />
 							</div>
 							<p className='banner-blue__info'>crecimiento del sector inmobiliario</p>
 						</div>
 						<div className='text-center'>
 							<div className='sm:h-[115px] flex items-start justify-center'>
-								<Image src={IconoBeneficio2} alt="" className='banner-blue__image' />
+								<Image src={IconoBeneficio2} alt="propiedades exclusivas" className='banner-blue__image' />
 							</div>
 							<p className='banner-blue__info'>propiedades exclusivas</p>
 						</div>
 						<div className='text-center'>
 							<div className='sm:h-[115px] flex items-start justify-center'>
-								<Image src={IconoBeneficio3} alt="" className='banner-blue__image' />
+								<Image src={IconoBeneficio3} alt="más altos estándares de calidad y confort" className='banner-blue__image' />
 							</div>
 							<p className='banner-blue__info'>más altos estándares de calidad y confort.</p>
 						</div>
@@ -136,7 +142,7 @@ const Nosotros = () => {
 						</div>
 					</div>
 				</div>
-				<Image src={ImageBanner1} alt="" className='xl:w-[730px] lg:w-[480px] lg:h-max md:w-[50%] w-[80%] lg:absolute relative top-0 left-0 -z-1 mx-auto' />
+				<Image src={ImageBanner1} alt="Cada proyecto es una oportunidad para demostrar nuestro compromiso con la calidad y la satisfacción del cliente." className='xl:w-[730px] lg:w-[480px] lg:h-max md:w-[50%] w-[80%] lg:absolute relative top-0 left-0 -z-1 mx-auto' />
 			</div>
 
 			<div className='banner-blue py-20'>

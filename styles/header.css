@@ -1,8 +1,12 @@
+.header{
+	z-index: 99;
+}
 .header__nav__item{
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: var(--secondary-color);
+	font-size: 14px;
 }
 .header__nav__item:before{
 	position: absolute;
@@ -21,7 +25,7 @@
 	width: 70px;
 	outline: none;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 24px;
 	color: var(--primary-color);
 	font-weight: 300;
@@ -48,16 +52,16 @@
 	left: 0;
 }
 .header__nav__movil__item{
-	background-color: var(--bg-primary);
+	background-color: var(--primary-color);
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
-	color: var(--primary-color);
+	color: var(--custom);
 	font-weight: 300;
-	border-bottom: 1px solid var(--primary-color);
+	border-bottom: 1px solid var(--custom);
 }
 .header__nav__movil__item:hover{
-	background-color: var(--primary-color);
-	color: var(--white);
+	background-color: var(--custom);
+	color: var(--primary-color);
 }
 
 @media only screen and (max-width: 1023px) {

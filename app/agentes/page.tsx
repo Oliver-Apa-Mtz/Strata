@@ -1,5 +1,9 @@
+import dynamic from 'next/dynamic';
+
 import '../../styles/home.css';
-import PropertyItem from '../../components/PropertyItem';
+const PropertyItem = dynamic(() => import('../../components/PropertyItem'), {
+	ssr: false,
+});
 
 import Equipo1 from '../../assets/img/equipo-1.webp';
 import Equipo2 from '../../assets/img/equipo-2.webp';

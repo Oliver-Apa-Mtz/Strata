@@ -40,22 +40,22 @@ const Header = () => {
 				<div className="lg:basis-4/6">
 					<div className="header__nav h-full flex items-center md:gap-3 xl:gap-8 text-sm">
 						<Link
-							href="nosotros"
+							href="/nosotros"
 							className="header__nav__item cursor-pointer flex items-center">
 							Nosotros
 						</Link>
 						<Link
-							href="propiedades"
+							href="/propiedades"
 							className="header__nav__item cursor-pointer flex items-center">
 							Propiedades
 						</Link>
 						<Link
-							href="agentes"
+							href="/agentes"
 							className="header__nav__item cursor-pointer flex items-center">
 							Socios
 						</Link>
 						<Link
-							href="contacto"
+							href="/contacto"
 							className="header__nav__item cursor-pointer flex items-center">
 							Contacto
 						</Link>
@@ -63,19 +63,19 @@ const Header = () => {
 				</div>
 				<div className="lg:basis-2/6">
 					<Link href="/" className="header__logo cursor-pointer">
-						<Image src={Logo} alt="" className='w-[138px] mx-auto' />
+						<Image src={Logo} alt="Logo Strata" className='w-[138px] mx-auto' />
 					</Link>
 				</div>
 				<div className="lg:basis-4/6">
 					<div className='flex justify-end items-center'>
 						<div className='header__search flex'>
-							<Image src={IconoSearch} alt="" className='w-[24px] mr-2 h-max' />
+							<Image src={IconoSearch} alt="Buscar" className='w-[24px] mr-2 h-max' />
 							<input type="text" name="search" placeholder="BUSCAR" />
 						</div>
 					</div>
 				</div>
 				<div className='header__menu text-6xl absolute top-[20px] right-[20px]'>
-					<Image src={IconoMenu} alt="" className='w-[40px] h-max cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />
+					<Image src={IconoMenu} alt="Menu" className='w-[40px] h-max cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />
 				</div>
 			</div>
 			{isMenuOpen && (
@@ -87,25 +87,25 @@ const Header = () => {
 						Home
 					</Link>
 					<Link
-						href="nosotros"
+						href="/nosotros"
 						className="header__nav__movil__item cursor-pointer w-full p-3 block"
 						onClick={() => setIsMenuOpen(false)}>
 						Nosotros
 					</Link>
 					<Link
-						href="propiedades"
+						href="/propiedades"
 						className="header__nav__movil__item cursor-pointer w-full p-3 block"
 						onClick={() => setIsMenuOpen(false)}>
 						Propiedades
 					</Link>
 					<Link
-						href="agentes"
+						href="/agentes"
 						className="header__nav__movil__item cursor-pointer w-full p-3 block"
 						onClick={() => setIsMenuOpen(false)}>
 						Socios
 					</Link>
 					<Link
-						href="contacto"
+						href="/contacto"
 						className="header__nav__movil__item cursor-pointer w-full p-3 block"
 						onClick={() => setIsMenuOpen(false)}>
 						Contacto

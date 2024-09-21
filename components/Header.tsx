@@ -11,6 +11,7 @@ import IconoMenu from '../assets/img/icono-menu.webp';
 
 const Header = () => {
 	const pathname = usePathname();
+	console.log(pathname)
 	const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -48,7 +49,7 @@ const Header = () => {
 						</Link>
 						<Link
 							href="/propiedades"
-							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/propiedades' ? 'active' : ''}`}>
+							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/propiedades' || pathname.includes('propiedad') ? 'active' : ''}`}>
 							Propiedades
 						</Link>
 						<Link

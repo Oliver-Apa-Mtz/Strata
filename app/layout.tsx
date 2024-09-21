@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { store } from '../store/store';
 import "./globals.css";
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ReduxProvider from '../components/ReduxProvider';
 
 export const metadata: Metadata = {
 	title: 'Strata - Soluciones Inmobiliarias de Alto Valor en Mazatlán, Sinaloa',
@@ -57,7 +59,9 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<Header />
-				{children}
+				<ReduxProvider>
+					{children}
+				</ReduxProvider>
 				<Footer />
 			</body>
 		</html>

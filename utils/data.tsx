@@ -8,7 +8,8 @@ export const DataList = [
 		"info": "Av del Mar 656, Tellería, 82017 Mazatlán, Sin",
 		"zone": "Norte",
 		"rooms": "1, 3",
-		"bathrooms": "1, 2"
+		"bathrooms": "1, 2",
+		"subtitle": "La serenidad del desierto con la frescura del océano",
 	},
 	{
 		"id": 2,
@@ -19,7 +20,8 @@ export const DataList = [
 		"info": "Av del Mar 656, Tellería, 82017 Mazatlán, Sin",
 		"zone": "Sur",
 		"rooms": "1, 3",
-		"bathrooms": "1, 2"
+		"bathrooms": "1, 2",
+		"subtitle": "La serenidad del desierto con la frescura del océano",
 	},
 	{
 		"id": 3,
@@ -30,7 +32,8 @@ export const DataList = [
 		"info": "Av del Mar 656, Tellería, 82017 Mazatlán, Sin",
 		"zone": "Centro",
 		"rooms": "1, 3",
-		"bathrooms": "1, 2"
+		"bathrooms": "1, 2",
+		"subtitle": "La serenidad del desierto con la frescura del océano",
 	},
 	{
 		"id": 4,
@@ -41,7 +44,8 @@ export const DataList = [
 		"info": "Av del Mar 656, Tellería, 82017 Mazatlán, Sin",
 		"zone": "Norte",
 		"rooms": "1, 3",
-		"bathrooms": "1, 2"
+		"bathrooms": "1, 2",
+		"subtitle": "La serenidad del desierto con la frescura del océano",
 	},
 	{
 		"id": 5,
@@ -52,7 +56,8 @@ export const DataList = [
 		"info": "Av del Mar 656, Tellería, 82017 Mazatlán, Sin",
 		"zone": "Alrededores",
 		"rooms": "1, 3",
-		"bathrooms": "1, 2"
+		"bathrooms": "1, 2",
+		"subtitle": "La serenidad del desierto con la frescura del océano",
 	},
 	{
 		"id": 6,
@@ -63,7 +68,8 @@ export const DataList = [
 		"info": "Av del Mar 656, Tellería, 82017 Mazatlán, Sin",
 		"zone": "Centro",
 		"rooms": "1, 3",
-		"bathrooms": "1, 2"
+		"bathrooms": "1, 2",
+		"subtitle": "La serenidad del desierto con la frescura del océano",
 	},
 ]
 

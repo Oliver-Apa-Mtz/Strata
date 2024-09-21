@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { setProperties } from '../../store/propertiesSlice';
 import { useSpring, animated } from '@react-spring/web';
 
 import { DataList, formatPrice } from '../../utils/data';
@@ -14,6 +16,7 @@ const SkeletonPropertyItem = dynamic(() => import('../../components/SkeletonProp
 });
 
 const Propiedades = () => {
+	const dispatch = useDispatch();
 	const [isMobile, setIsMobile] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [isVisible, setIsVisible] = useState(false);
@@ -70,6 +73,7 @@ const Propiedades = () => {
 		const fetchData = async () => {
 			const properties = await getData();
 			setPropiedades(properties);
+			dispatch(setProperties(properties));
 		};
 		fetchData();
 	}, []);

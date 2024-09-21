@@ -1,5 +1,8 @@
+"use client";
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useSpring, animated } from '@react-spring/web';
 
 import '../../styles/home.css';
 import '../../styles/footer.css';
@@ -13,6 +16,21 @@ import IconoPin from '../../assets/img/icono-pin-footer.webp';
 import IconoCall from '../../assets/img/icono-call-footer.webp';
 
 const Contacto = () => {
+	const [isMobile, setIsMobile] = useState(false);
+	const [isVisible, setIsVisible] = useState(false);
+
+	const animationPropsBanner1 = useSpring({
+		opacity: isVisible ? 1 : 0,
+		transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
+	});
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 1023);
+		};
+		handleResize();
+		setIsVisible(true);
+	}, []);
 	return (
 		<div className="lg:pt-[100px] pt-[80px]">
 			<div className='banner-blue py-20'>
@@ -24,39 +42,41 @@ const Contacto = () => {
 			</div>
 
 			<div className='banner-info--map relative'>
-				<div className='container flex justify-between items-center flex-wrap'>
-					<div className='banner-info__text--large lg:basis-1/2 basis-full lg:mx-0 mx-auto'>
-						<p className='banner-info__text__title lg:text-left text-center lg:mb-0 mb-10'>Cómo encontrarnos</p>
-						<div className='banner-info__text'>
-							<div className="flex footer__item__container--large lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
-								<Image src={IconoPhone} alt="Contáctanos" className='w-[70px] h-max lg:mr-5 mx-auto' />
-								<div className='w-full'>
-									<p className='footer__item__text'>Contáctanos</p>
-									<a href="" className='footer__item__link block'>Teléfono: 669 138 8434</a>
-									<a href="" className='footer__item__link block'>Whatsapp: 669 138 8434</a>
+				<animated.div style={!isMobile ? animationPropsBanner1 : {}} className="animated-element">
+					<div className='container flex justify-between items-center flex-wrap'>
+						<div className='banner-info__text--large lg:basis-1/2 basis-full lg:mx-0 mx-auto'>
+							<p className='banner-info__text__title lg:text-left text-center lg:mb-0 mb-10'>Cómo encontrarnos</p>
+							<div className='banner-info__text'>
+								<div className="flex footer__item__container--large lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
+									<Image src={IconoPhone} alt="Contáctanos" className='w-[70px] h-max lg:mr-5 mx-auto' />
+									<div className='w-full'>
+										<p className='footer__item__text'>Contáctanos</p>
+										<a href="" className='footer__item__link block'>Teléfono: 669 138 8434</a>
+										<a href="" className='footer__item__link block'>Whatsapp: 669 138 8434</a>
+									</div>
 								</div>
-							</div>
-							<div className="flex items-center footer__item__container--large footer__item__container--line lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
-								<Image src={IconoPin} alt="Localización" className='w-[70px] h-max lg:mr-5 mx-auto' />
-								<div className='w-full'>
-									<p className='footer__item__text'>Localización</p>
-									<a href="" className='footer__item__link'>Avenida Doctor Carlos Canseco. 6000-6 82133. Mazatlán, Sinaloa.</a>
+								<div className="flex items-center footer__item__container--large footer__item__container--line lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
+									<Image src={IconoPin} alt="Localización" className='w-[70px] h-max lg:mr-5 mx-auto' />
+									<div className='w-full'>
+										<p className='footer__item__text'>Localización</p>
+										<a href="" className='footer__item__link'>Avenida Doctor Carlos Canseco. 6000-6 82133. Mazatlán, Sinaloa.</a>
+									</div>
 								</div>
-							</div>
-							<div className="flex footer__item__container--large lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
-								<Image src={IconoCall} alt="Servicio al cliente" className='w-[70px] h-max lg:mr-5 mx-auto' />
-								<div className='w-full'>
-									<p className='footer__item__text'>Servicio al cliente</p>
-									<a href="" className='footer__item__link'>contacto@propertybystrata.com</a>
+								<div className="flex footer__item__container--large lg:w-[90%] w-full lg:flex-nowrap flex-wrap">
+									<Image src={IconoCall} alt="Servicio al cliente" className='w-[70px] h-max lg:mr-5 mx-auto' />
+									<div className='w-full'>
+										<p className='footer__item__text'>Servicio al cliente</p>
+										<a href="" className='footer__item__link'>contacto@propertybystrata.com</a>
+									</div>
 								</div>
 							</div>
 						</div>
+						<div className='banner-info__images lg:basis-1/2 basis-full lg:mt-0 mt-10'>
+							<Image src={ImageBanner1} alt="Cómo encontrarnos" className='banner-info__images__item lg:mx-0 mx-auto' />
+						</div>
 					</div>
-					<div className='banner-info__images lg:basis-1/2 basis-full lg:mt-0 mt-10'>
-						<Image src={ImageBanner1} alt="Cómo encontrarnos" className='banner-info__images__item lg:mx-0 mx-auto' />
-					</div>
-				</div>
-				<Form />
+					<Form />
+				</animated.div>
 			</div>
 		</div>
 	)

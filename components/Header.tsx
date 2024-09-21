@@ -1,6 +1,7 @@
 "use client";
 import '../styles/header.css';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -9,6 +10,7 @@ import IconoSearch from '../assets/img/icono-search.webp';
 import IconoMenu from '../assets/img/icono-menu.webp';
 
 const Header = () => {
+	const pathname = usePathname();
 	const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,22 +43,22 @@ const Header = () => {
 					<div className="header__nav h-full flex items-center md:gap-3 xl:gap-8 text-sm">
 						<Link
 							href="/nosotros"
-							className="header__nav__item cursor-pointer flex items-center">
+							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/nosotros' ? 'active' : ''}`}>
 							Nosotros
 						</Link>
 						<Link
 							href="/propiedades"
-							className="header__nav__item cursor-pointer flex items-center">
+							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/propiedades' ? 'active' : ''}`}>
 							Propiedades
 						</Link>
 						<Link
 							href="/agentes"
-							className="header__nav__item cursor-pointer flex items-center">
+							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/agentes' ? 'active' : ''}`}>
 							Socios
 						</Link>
 						<Link
 							href="/contacto"
-							className="header__nav__item cursor-pointer flex items-center">
+							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/contacto' ? 'active' : ''}`}>
 							Contacto
 						</Link>
 					</div>

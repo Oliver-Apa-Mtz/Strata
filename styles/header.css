@@ -21,6 +21,16 @@
 .header__nav__item:hover:before {
 	width: 50%;
 }
+.header__nav .active:before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -2px;
+	width: 50%;
+	height: 1px;
+	background-color: var(--secondary-color);
+	transition: all .2s linear;
+}
 .header__search input{
 	width: 70px;
 	outline: none;

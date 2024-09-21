@@ -1,5 +1,8 @@
+"use client";
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useSpring, animated } from '@react-spring/web';
 
 import '../styles/home.css';
 import Button from '../components/Button';
@@ -38,54 +41,109 @@ import LogoSocio2 from '../assets/img/logo-socio-2.svg';
 import LogoSocio3 from '../assets/img/logo-socio-3.svg';
 
 export default function Home() {
+	const [isMobile, setIsMobile] = useState(false);
+	const [isVisible, setIsVisible] = useState(false);
+	const [isVisibleBanner2, setIsVisibleBanner2] = useState(false);
+	const [isVisibleBanner3, setIsVisibleBanner3] = useState(false);
+	const [isVisibleBanner4, setIsVisibleBanner4] = useState(false);
+	const [isVisibleBanner5, setIsVisibleBanner5] = useState(false);
+
+	const handleScroll = () => {
+		const scrollPosition = window.scrollY;
+		const headerHeight = 500;
+		setIsVisibleBanner2(scrollPosition > headerHeight);
+		setIsVisibleBanner3(scrollPosition > headerHeight);
+		setIsVisibleBanner4(scrollPosition > (headerHeight + 1650));
+		setIsVisibleBanner5(scrollPosition > (headerHeight + 4500));
+	};
+
+	const animationPropsBanner1 = useSpring({
+		opacity: isVisible ? 1 : 0,
+		transform: isVisible ? 'translateX(0)' : 'translateX(-50px)',
+	});
+	const animationPropsBanner2 = useSpring({
+		opacity: isVisibleBanner2 ? 1 : 0,
+		transform: isVisibleBanner2 ? 'translateX(0)' : 'translateX(-50px)',
+	});
+	const animationPropsBanner3 = useSpring({
+		opacity: isVisibleBanner3 ? 1 : 0,
+		transform: isVisibleBanner3 ? 'translateX(0)' : 'translateX(50px)',
+	});
+	const animationPropsBanner4 = useSpring({
+		opacity: isVisibleBanner4 ? 1 : 0,
+		transform: isVisibleBanner4 ? 'translateY(0)' : 'translateY(50px)',
+	});
+	const animationPropsBanner5 = useSpring({
+		opacity: isVisibleBanner5 ? 1 : 0,
+		transform: isVisibleBanner5 ? 'translateY(0)' : 'translateY(50px)',
+	});
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 1023);
+		};
+		handleResize();
+		setIsVisible(true);
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
 		<div className='lg:pt-[100px] pt-[80px]'>
 			<div id="home" className="banner-ppal w-screen">
 				<div className="container h-full flex items-center gap-4">
-					<div className="banner__text w-full">
-						<h1 className="mb-10 title-ppal">
-							Soluciones inmobiliarias de alto valor
-						</h1>
-						<h2 className="mb-6 sm:text-base subtitle">
-							Soluciones inmobiliarias de alto valor en Mazatlán, Sinaloa.
-						</h2>
-						<Button text='Shop now' type='primary' position='left' />
-					</div>
+					<animated.div style={!isMobile ? animationPropsBanner1 : {}} className="animated-element">
+						<div className="banner__text w-full">
+							<h1 className="mb-10 title-ppal">
+								Soluciones inmobiliarias de alto valor
+							</h1>
+							<h2 className="mb-6 sm:text-base subtitle">
+								Soluciones inmobiliarias de alto valor en Mazatlán, Sinaloa.
+							</h2>
+							<Button text='Shop now' type='primary' position='left' />
+						</div>
+					</animated.div>
 				</div>
 			</div>
 
 			<div className='banner-info relative'>
 				<div className='container flex justify-between lg:flex-nowrap flex-wrap'>
-					<div className='banner-info__text lg:basis-1/2 basis-full'>
-						<p className='banner-info__text__custom'>Quiénes Somos</p>
-						<p className='banner-info__text__title my-6'>Nosotros</p>
-						<p className='banner-info__text__subtitle mb-6'>
-							En Strata, fundada en 2023, nuestra empresa combina innovación
-							y profesionalismo con más de 10 años de experiencia en el sector
-							inmobiliario.
-						</p>
-						<p className='banner-info__text__text'>
-							Nos especializamos en la comercialización de proyectos exclusivos
-							y en la administración de propiedades con fines de renta vacacional.
-							Como miembros de la Asociación Mexicana de Profesionales Inmobiliarios
-							(AMPI), seguimos las mejores prácticas del sector y nos mantenemos
-							actualizados con las últimas tendencias y regulaciones, asegurando la
-							confianza y seguridad en las inversiones de nuestros clientes.
-						</p>
-						<div className='banner-info__icono flex items-center justify-center lg:justify-start mt-6 mb-12'>
-							<Image src={LogoAmpi} alt="Logo AMPI" className='banner-info__icono__image' />
-							<p className='banner-info__icono__text'>
-								Miembros de la Asociación Mexicana de Profesionales Inmobiliarios (AMPI)
+					<animated.div style={!isMobile ? animationPropsBanner2 : {}} className="animated-element">
+						<div className='banner-info__text lg:basis-1/2 basis-full'>
+							<p className='banner-info__text__custom'>Quiénes Somos</p>
+							<p className='banner-info__text__title my-6'>Nosotros</p>
+							<p className='banner-info__text__subtitle mb-6'>
+								En Strata, fundada en 2023, nuestra empresa combina innovación
+								y profesionalismo con más de 10 años de experiencia en el sector
+								inmobiliario.
 							</p>
+							<p className='banner-info__text__text'>
+								Nos especializamos en la comercialización de proyectos exclusivos
+								y en la administración de propiedades con fines de renta vacacional.
+								Como miembros de la Asociación Mexicana de Profesionales Inmobiliarios
+								(AMPI), seguimos las mejores prácticas del sector y nos mantenemos
+								actualizados con las últimas tendencias y regulaciones, asegurando la
+								confianza y seguridad en las inversiones de nuestros clientes.
+							</p>
+							<div className='banner-info__icono flex items-center justify-center lg:justify-start mt-6 mb-12'>
+								<Image src={LogoAmpi} alt="Logo AMPI" className='banner-info__icono__image' />
+								<p className='banner-info__icono__text'>
+									Miembros de la Asociación Mexicana de Profesionales Inmobiliarios (AMPI)
+								</p>
+							</div>
+							<Button text='Contáctanos' type='secondary' position='left' />
 						</div>
-						<Button text='Contáctanos' type='secondary' position='left' />
-					</div>
-					<div className='banner-info__images lg:basis-1/2 basis-full relative z-10 flex lg:justify-end justify-center pt-10 lg:pt-0'>
-						<Image src={ImageBanner1} alt="Nos especializamos en la comercialización de proyectos exclusivos y en la administración de propiedades con fines de renta vacacional." className='banner-info__images__item' />
-						<div className='banner-info__images__item--custom'></div>
-					</div>
+					</animated.div>
+					<animated.div style={!isMobile ? animationPropsBanner3 : {}} className="animated-element">
+						<div className='banner-info__images lg:basis-1/2 basis-full relative z-10 flex lg:justify-end justify-center pt-10 lg:pt-0'>
+							<Image src={ImageBanner1} alt="Nos especializamos en la comercialización de proyectos exclusivos y en la administración de propiedades con fines de renta vacacional." className='banner-info__images__item' />
+							<div className='banner-info__images__item--custom'></div>
+						</div>
+					</animated.div>
 				</div>
-				<Image src={BannerEffect1} alt="Quiénes Somos" className='h-full absolute top-0 right-0 -z-1 lg:block hidden' />
+				<Image src={BannerEffect1} alt="Quiénes Somos" className='h-full absolute top-0 right-0 -z-1 lg:block hidden' style={{ zIndex: '-1' }} />
 			</div>
 
 			<BannerToCall bgImage={true} image={BannerCall1} title={'Nuestro compromiso con la calidad y la satisfacción del cliente es el núcleo de todo lo que hacemos.'} />
@@ -102,74 +160,76 @@ export default function Home() {
 						</p>
 						<p className='banner-info__text__title mt-10 mb-12'>Propiedades</p>
 					</div>
-					<div className='bg-white w-full p-6 flex gap-2 flex-wrap justify-between'>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property1}
-								type={'Departamento'}
-								price={'$2,800,000'}
-								title={'Encanto Roca del Mar'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-								rooms={'1, 3'}
-								bathrooms={'1, 2'}
-							/>
+					<animated.div style={!isMobile ? animationPropsBanner4 : {}} className="animated-element">
+						<div className='bg-white w-full p-6 flex gap-2 flex-wrap justify-between'>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property1.src}
+									type={'Departamento'}
+									price={2800000}
+									title={'Encanto Roca del Mar'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									rooms={'1, 3'}
+									bathrooms={'1, 2'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property2.src}
+									type={'Renta'}
+									price={2800000}
+									title={'Encanto Roca del Mar'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									rooms={'1, 3'}
+									bathrooms={'1, 2'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property3.src}
+									type={'Desarrollo'}
+									price={2800000}
+									title={'Encanto Roca del Mar'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									rooms={'1, 3'}
+									bathrooms={'1, 2'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property4.src}
+									type={'Conjunto de casas'}
+									price={2800000}
+									title={'Encanto Roca del Mar'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									rooms={'1, 3'}
+									bathrooms={'1, 2'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property5.src}
+									type={'Preventa'}
+									price={2800000}
+									title={'Encanto Roca del Mar'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									rooms={'1, 3'}
+									bathrooms={'1, 2'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property6.src}
+									type={'Proyecto'}
+									price={2800000}
+									title={'Encanto Roca del Mar'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									rooms={'1, 3'}
+									bathrooms={'1, 2'}
+								/>
+							</div>
 						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property2}
-								type={'Renta'}
-								price={'$2,800,000'}
-								title={'Encanto Roca del Mar'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-								rooms={'1, 3'}
-								bathrooms={'1, 2'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property3}
-								type={'Desarrollo'}
-								price={'$2,800,000'}
-								title={'Encanto Roca del Mar'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-								rooms={'1, 3'}
-								bathrooms={'1, 2'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property4}
-								type={'Conjunto de casas'}
-								price={'$2,800,000'}
-								title={'Encanto Roca del Mar'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-								rooms={'1, 3'}
-								bathrooms={'1, 2'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property5}
-								type={'Preventa'}
-								price={'$2,800,000'}
-								title={'Encanto Roca del Mar'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-								rooms={'1, 3'}
-								bathrooms={'1, 2'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property6}
-								type={'Proyecto'}
-								price={'$2,800,000'}
-								title={'Encanto Roca del Mar'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-								rooms={'1, 3'}
-								bathrooms={'1, 2'}
-							/>
-						</div>
-					</div>
+					</animated.div>
 					<div className='pt-20'>
 						<Button text='Contáctanos' type='secondary' position='center' />
 					</div>
@@ -213,50 +273,52 @@ export default function Home() {
 							eget risus congue pharetra a eget nisi.
 						</p>
 					</div>
-					<div className='w-full p-6 flex gap-2 flex-wrap justify-between'>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property7}
-								zone={'Centro'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-							/>
+					<animated.div style={!isMobile ? animationPropsBanner5 : {}} className="animated-element">
+						<div className='w-full p-6 flex gap-2 flex-wrap justify-between'>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property7.src}
+									zone={'Centro'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property8.src}
+									zone={'Puerto'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property9.src}
+									zone={'Norte'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property10.src}
+									zone={'Sur'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property11.src}
+									zone={'Zona comercial'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+								/>
+							</div>
+							<div className='banner-data__item mb-6'>
+								<PropertyItem
+									image={Property12.src}
+									zone={'Alrededores'}
+									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+								/>
+							</div>
 						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property8}
-								zone={'Puerto'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property9}
-								zone={'Norte'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property10}
-								zone={'Sur'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property11}
-								zone={'Zona comercial'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-							/>
-						</div>
-						<div className='banner-data__item mb-6'>
-							<PropertyItem
-								image={Property12}
-								zone={'Alrededores'}
-								info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
-							/>
-						</div>
-					</div>
+					</animated.div>
 				</div>
 			</div>
 

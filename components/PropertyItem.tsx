@@ -4,27 +4,39 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 import IconStart from '../assets/img/star.svg';
+import { formatPrice } from '../utils/data';
 
 interface IProp {
 	image: any;
 	type?: string;
-	price?: string;
+	price?: number;
 	title?: string;
 	info?: string;
 	rooms?: string;
 	bathrooms?: string;
 	zone?: string;
+	id?: number
 }
 
-const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone }: IProp) => {
+const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone, id }: IProp) => {
 	const router = useRouter();
 	const handleProductClick = (id: number) => {
 		router.push(`/propiedad/${id}`);
 	};
 
 	return (
-		<div className='property w-full' onClick={() => handleProductClick(1)}>
-			<div className='property__image relative' style={{ backgroundImage: `url(${image.src})` }}>
+		<div
+			className='property w-full'
+			onClick={() => {
+				if (id) {
+					handleProductClick(id);
+				}
+			}}
+		>
+			<div className='relative'>
+				<div className='property__image__container'>
+					<div className='property__image' style={{ backgroundImage: `url(${image})` }}></div>
+				</div>
 				{type && (
 					<div className='property__type absolute text-center'>
 						<p>{type}</p>
@@ -32,7 +44,7 @@ const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone 
 				)}
 				{price && (
 					<div className='property__price absolute text-center pt-1'>
-						<p>Desde {price}</p>
+						<p>Desde {formatPrice(price)}</p>
 					</div>
 				)}
 			</div>

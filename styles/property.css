@@ -17,6 +17,9 @@
 	min-height: 433px;
 	transition: transform 1s ease;
 }
+.property__image--small{
+	min-height: 300px !important;
+}
 .property__type{
 	min-width: 145px;
 	padding: 0 10px;
@@ -76,7 +79,38 @@
 	background-size: contain;
 	background-position: left center;
 }
+.banner-detail__price{
+	font-family: 'Fahkwang Regular', sans-serif;
+	font-size: 30px;
+	line-height: 62px;
+	color: var(--primary-color);
+}
+.banner-detail__model__item{
+	background-color: #F4EFEB;
+	position: relative;
+	cursor: pointer;
+}
+.banner-detail__model__item:hover{
+	background-color: var(--white);
+}
+.banner-detail__model__item--line::before{
+	position: absolute;
+	content: "";
+	width: 1px;
+	height: 50%;
+	top: 25%;
+	right: 0;
+	background-color: #E6E2DE;
+}
+.banner-detail__model__item--active{
+	background-color: var(--white);
+}
 
+@media only screen and (max-width: 1023px) {
+	.banner-datail-info {
+		background-color: var(--bg-footer);
+	}
+}
 @media only screen and (max-width: 639px) {
 	.property{
 		margin: 0 auto;

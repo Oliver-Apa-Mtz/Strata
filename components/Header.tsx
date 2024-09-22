@@ -11,7 +11,6 @@ import IconoMenu from '../assets/img/icono-menu.webp';
 
 const Header = () => {
 	const pathname = usePathname();
-	console.log(pathname)
 	const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 

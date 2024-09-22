@@ -16,9 +16,10 @@ interface IProp {
 	bathrooms?: string;
 	zone?: string;
 	id?: number
+	small?: boolean;
 }
 
-const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone, id }: IProp) => {
+const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone, id, small }: IProp) => {
 	const router = useRouter();
 	const handleProductClick = (id: number) => {
 		router.push(`/propiedad/${id}`);
@@ -35,7 +36,7 @@ const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone,
 		>
 			<div className='relative'>
 				<div className='property__image__container'>
-					<div className='property__image' style={{ backgroundImage: `url(${image})` }}></div>
+					<div className={`property__image ${small ? 'property__image--small' : ''}`} style={{ backgroundImage: `url(${image})` }}></div>
 				</div>
 				{type && (
 					<div className='property__type absolute text-center'>

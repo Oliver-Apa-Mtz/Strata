@@ -83,6 +83,9 @@
 	color: var(--primary-color);
 	font-weight: 300;
 }
+.banner-info__text__text--border{
+	border-bottom: 1px solid var(--gray);
+}
 .banner-info__icono__text{
 	width: 214px;
 	font-family: 'Montserrat', sans-serif;

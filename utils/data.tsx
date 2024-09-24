@@ -1,3 +1,13 @@
+import Banner from '../assets/img/mockPropiedad/banner.webp';
+import Logo from '../assets/img/mockPropiedad/logo-white.webp';
+import LogoColor from '../assets/img/mockPropiedad/logo-color.webp';
+import ImageMain from '../assets/img/mockPropiedad/photo-1.webp';
+import Picture1 from '../assets/img/mockPropiedad/photo-2.webp';
+import Picture2 from '../assets/img/mockPropiedad/photo-3.webp';
+import Picture3 from '../assets/img/mockPropiedad/photo-4.webp';
+import Agente from '../assets/img/equipo-3.webp';
+import Room from '../assets/img/mockPropiedad/room.webp';
+
 export const DataList = [
 	{
 		"id": 1,
@@ -20,26 +30,26 @@ export const DataList = [
 		"subtitle": "La serenidad del desierto con la frescura del océano",
 		"textInfo": "Oasis Ananta es un exclusivo desarrollo frente a la playa en Mazatlán, Sinaloa, que fusiona la serenidad del desierto con la frescura del océano.",
 		"text": "Este proyecto ofrece un santuario único donde la elegancia se conecta con la naturaleza, proporcionando una experiencia de vida inigualable con todas las comodidades modernas y un diseño arquitectónico que se integra armoniosamente con el entorno natural.",
-		"banner": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
-		"logo": "https://strata-sooty.vercel.app/_next/static/media/logo-white.6a821635.webp",
-		"logoColor": "https://strata-sooty.vercel.app/_next/static/media/logo-color.db51a7bd.webp",
+		"banner": Banner.src,
+		"logo": Logo.src,
+		"logoColor": LogoColor.src,
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare ligula ante, molestie congue erat interdum nec. Cras efficitur eget velit eget vulputate. Mauris luctus purus vitae faucibus aliquet.",
-		"imageMain": "https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+		"imageMain": ImageMain.src,
 		"pictures": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
+			Picture1.src,
 		],
-		"video": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
+		"video": Banner.src,
 		"picturesExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
 		],
 		"imageMainExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+			ImageMain.src,
+			ImageMain.src,
 		],
 		"sizes": {
 			"interior": "44 m²",
@@ -49,7 +59,7 @@ export const DataList = [
 		"agente": {
 			"id": "1",
 			"name": "Lorem ipsum dolor sit amet",
-			"image": "https://strata-sooty.vercel.app/_next/static/media/equipo-3.8feb4d7b.webp"
+			"image": Agente.src
 		},
 		"features": [
 			"Interior",
@@ -79,7 +89,7 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": "https://strata-sooty.vercel.app/_next/static/media/room.16b3ba1d.webp"
+		"croquis": Room.src
 	},
 	{
 		"id": 2,
@@ -102,26 +112,26 @@ export const DataList = [
 		"subtitle": "La serenidad del desierto con la frescura del océano",
 		"textInfo": "Oasis Ananta es un exclusivo desarrollo frente a la playa en Mazatlán, Sinaloa, que fusiona la serenidad del desierto con la frescura del océano.",
 		"text": "Este proyecto ofrece un santuario único donde la elegancia se conecta con la naturaleza, proporcionando una experiencia de vida inigualable con todas las comodidades modernas y un diseño arquitectónico que se integra armoniosamente con el entorno natural.",
-		"banner": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
-		"logo": "https://strata-sooty.vercel.app/_next/static/media/logo-white.6a821635.webp",
-		"logoColor": "https://strata-sooty.vercel.app/_next/static/media/logo-color.db51a7bd.webp",
+		"banner": Banner.src,
+		"logo": Logo.src,
+		"logoColor": LogoColor.src,
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare ligula ante, molestie congue erat interdum nec. Cras efficitur eget velit eget vulputate. Mauris luctus purus vitae faucibus aliquet.",
-		"imageMain": "https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+		"imageMain": ImageMain.src,
 		"pictures": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
+			Picture1.src,
 		],
-		"video": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
+		"video": Banner.src,
 		"picturesExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
 		],
 		"imageMainExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+			ImageMain.src,
+			ImageMain.src,
 		],
 		"sizes": {
 			"interior": "44 m²",
@@ -131,7 +141,7 @@ export const DataList = [
 		"agente": {
 			"id": "1",
 			"name": "Lorem ipsum dolor sit amet",
-			"image": "https://strata-sooty.vercel.app/_next/static/media/equipo-3.8feb4d7b.webp"
+			"image": Agente.src
 		},
 		"features": [
 			"Interior",
@@ -161,7 +171,7 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": "https://strata-sooty.vercel.app/_next/static/media/room.16b3ba1d.webp"
+		"croquis": Room.src
 	},
 	{
 		"id": 3,
@@ -184,26 +194,26 @@ export const DataList = [
 		"subtitle": "La serenidad del desierto con la frescura del océano",
 		"textInfo": "Oasis Ananta es un exclusivo desarrollo frente a la playa en Mazatlán, Sinaloa, que fusiona la serenidad del desierto con la frescura del océano.",
 		"text": "Este proyecto ofrece un santuario único donde la elegancia se conecta con la naturaleza, proporcionando una experiencia de vida inigualable con todas las comodidades modernas y un diseño arquitectónico que se integra armoniosamente con el entorno natural.",
-		"banner": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
-		"logo": "https://strata-sooty.vercel.app/_next/static/media/logo-white.6a821635.webp",
-		"logoColor": "https://strata-sooty.vercel.app/_next/static/media/logo-color.db51a7bd.webp",
+		"banner": Banner.src,
+		"logo": Logo.src,
+		"logoColor": LogoColor.src,
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare ligula ante, molestie congue erat interdum nec. Cras efficitur eget velit eget vulputate. Mauris luctus purus vitae faucibus aliquet.",
-		"imageMain": "https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+		"imageMain": ImageMain.src,
 		"pictures": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
+			Picture1.src,
 		],
-		"video": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
+		"video": Banner.src,
 		"picturesExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
 		],
 		"imageMainExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+			ImageMain.src,
+			ImageMain.src,
 		],
 		"sizes": {
 			"interior": "44 m²",
@@ -213,7 +223,7 @@ export const DataList = [
 		"agente": {
 			"id": "1",
 			"name": "Lorem ipsum dolor sit amet",
-			"image": "https://strata-sooty.vercel.app/_next/static/media/equipo-3.8feb4d7b.webp"
+			"image": Agente.src
 		},
 		"features": [
 			"Interior",
@@ -243,7 +253,7 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": "https://strata-sooty.vercel.app/_next/static/media/room.16b3ba1d.webp"
+		"croquis": Room.src
 	},
 	{
 		"id": 4,
@@ -266,26 +276,26 @@ export const DataList = [
 		"subtitle": "La serenidad del desierto con la frescura del océano",
 		"textInfo": "Oasis Ananta es un exclusivo desarrollo frente a la playa en Mazatlán, Sinaloa, que fusiona la serenidad del desierto con la frescura del océano.",
 		"text": "Este proyecto ofrece un santuario único donde la elegancia se conecta con la naturaleza, proporcionando una experiencia de vida inigualable con todas las comodidades modernas y un diseño arquitectónico que se integra armoniosamente con el entorno natural.",
-		"banner": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
-		"logo": "https://strata-sooty.vercel.app/_next/static/media/logo-white.6a821635.webp",
-		"logoColor": "https://strata-sooty.vercel.app/_next/static/media/logo-color.db51a7bd.webp",
+		"banner": Banner.src,
+		"logo": Logo.src,
+		"logoColor": LogoColor.src,
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare ligula ante, molestie congue erat interdum nec. Cras efficitur eget velit eget vulputate. Mauris luctus purus vitae faucibus aliquet.",
-		"imageMain": "https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+		"imageMain": ImageMain.src,
 		"pictures": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
+			Picture1.src,
 		],
-		"video": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
+		"video": Banner.src,
 		"picturesExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
 		],
 		"imageMainExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+			ImageMain.src,
+			ImageMain.src,
 		],
 		"sizes": {
 			"interior": "44 m²",
@@ -295,7 +305,7 @@ export const DataList = [
 		"agente": {
 			"id": "1",
 			"name": "Lorem ipsum dolor sit amet",
-			"image": "https://strata-sooty.vercel.app/_next/static/media/equipo-3.8feb4d7b.webp"
+			"image": Agente.src
 		},
 		"features": [
 			"Interior",
@@ -325,7 +335,7 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": "https://strata-sooty.vercel.app/_next/static/media/room.16b3ba1d.webp"
+		"croquis": Room.src
 	},
 	{
 		"id": 5,
@@ -348,26 +358,26 @@ export const DataList = [
 		"subtitle": "La serenidad del desierto con la frescura del océano",
 		"textInfo": "Oasis Ananta es un exclusivo desarrollo frente a la playa en Mazatlán, Sinaloa, que fusiona la serenidad del desierto con la frescura del océano.",
 		"text": "Este proyecto ofrece un santuario único donde la elegancia se conecta con la naturaleza, proporcionando una experiencia de vida inigualable con todas las comodidades modernas y un diseño arquitectónico que se integra armoniosamente con el entorno natural.",
-		"banner": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
-		"logo": "https://strata-sooty.vercel.app/_next/static/media/logo-white.6a821635.webp",
-		"logoColor": "https://strata-sooty.vercel.app/_next/static/media/logo-color.db51a7bd.webp",
+		"banner": Banner.src,
+		"logo": Logo.src,
+		"logoColor": LogoColor.src,
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare ligula ante, molestie congue erat interdum nec. Cras efficitur eget velit eget vulputate. Mauris luctus purus vitae faucibus aliquet.",
-		"imageMain": "https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+		"imageMain": ImageMain.src,
 		"pictures": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
+			Picture1.src,
 		],
-		"video": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
+		"video": Banner.src,
 		"picturesExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
 		],
 		"imageMainExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+			ImageMain.src,
+			ImageMain.src,
 		],
 		"sizes": {
 			"interior": "44 m²",
@@ -377,7 +387,7 @@ export const DataList = [
 		"agente": {
 			"id": "1",
 			"name": "Lorem ipsum dolor sit amet",
-			"image": "https://strata-sooty.vercel.app/_next/static/media/equipo-3.8feb4d7b.webp"
+			"image": Agente.src
 		},
 		"features": [
 			"Interior",
@@ -407,7 +417,7 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": "https://strata-sooty.vercel.app/_next/static/media/room.16b3ba1d.webp"
+		"croquis": Room.src
 	},
 	{
 		"id": 6,
@@ -430,26 +440,26 @@ export const DataList = [
 		"subtitle": "La serenidad del desierto con la frescura del océano",
 		"textInfo": "Oasis Ananta es un exclusivo desarrollo frente a la playa en Mazatlán, Sinaloa, que fusiona la serenidad del desierto con la frescura del océano.",
 		"text": "Este proyecto ofrece un santuario único donde la elegancia se conecta con la naturaleza, proporcionando una experiencia de vida inigualable con todas las comodidades modernas y un diseño arquitectónico que se integra armoniosamente con el entorno natural.",
-		"banner": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
-		"logo": "https://strata-sooty.vercel.app/_next/static/media/logo-white.6a821635.webp",
-		"logoColor": "https://strata-sooty.vercel.app/_next/static/media/logo-color.db51a7bd.webp",
+		"banner": Banner.src,
+		"logo": Logo.src,
+		"logoColor": LogoColor.src,
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare ligula ante, molestie congue erat interdum nec. Cras efficitur eget velit eget vulputate. Mauris luctus purus vitae faucibus aliquet.",
-		"imageMain": "https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+		"imageMain": ImageMain.src,
 		"pictures": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
+			Picture1.src,
 		],
-		"video": "https://strata-sooty.vercel.app/_next/static/media/banner.b2723c35.webp",
+		"video": Banner.src,
 		"picturesExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-2.9a0c2abc.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-3.457131d6.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-4.2e1fb7da.webp",
+			Picture1.src,
+			Picture2.src,
+			Picture3.src,
 		],
 		"imageMainExtra": [
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
-			"https://strata-sooty.vercel.app/_next/static/media/photo-1.1642cffe.webp",
+			ImageMain.src,
+			ImageMain.src,
 		],
 		"sizes": {
 			"interior": "44 m²",
@@ -459,7 +469,7 @@ export const DataList = [
 		"agente": {
 			"id": "1",
 			"name": "Lorem ipsum dolor sit amet",
-			"image": "https://strata-sooty.vercel.app/_next/static/media/equipo-3.8feb4d7b.webp"
+			"image": Agente.src
 		},
 		"features": [
 			"Interior",
@@ -489,7 +499,7 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": "https://strata-sooty.vercel.app/_next/static/media/room.16b3ba1d.webp"
+		"croquis": Room.src
 	},
 ]
 

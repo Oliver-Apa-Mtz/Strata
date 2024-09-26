@@ -89,7 +89,19 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": Room.src
+		"croquis": Room.src,
+		"location": [
+			{
+				"title": "Encanto Roca del Mar",
+				"lat": 23.268605,
+				"lng": -106.444921
+			},
+			{
+				"title": "Encanto",
+				"lat": 23.2284341,
+				"lng": -106.4352091
+			}
+		]
 	},
 	{
 		"id": 2,
@@ -171,7 +183,19 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": Room.src
+		"croquis": Room.src,
+		"location": [
+			{
+				"title": "Encanto Roca del Mar",
+				"lat": 23.268605,
+				"lng": -106.444921
+			},
+			{
+				"title": "Encanto",
+				"lat": 23.2284341,
+				"lng": -106.4352091
+			}
+		]
 	},
 	{
 		"id": 3,
@@ -253,7 +277,19 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": Room.src
+		"croquis": Room.src,
+		"location": [
+			{
+				"title": "Encanto Roca del Mar",
+				"lat": 23.268605,
+				"lng": -106.444921
+			},
+			{
+				"title": "Encanto",
+				"lat": 23.2284341,
+				"lng": -106.4352091
+			}
+		]
 	},
 	{
 		"id": 4,
@@ -335,7 +371,19 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": Room.src
+		"croquis": Room.src,
+		"location": [
+			{
+				"title": "Encanto Roca del Mar",
+				"lat": 23.268605,
+				"lng": -106.444921
+			},
+			{
+				"title": "Encanto",
+				"lat": 23.2284341,
+				"lng": -106.4352091
+			}
+		]
 	},
 	{
 		"id": 5,
@@ -417,7 +465,19 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": Room.src
+		"croquis": Room.src,
+		"location": [
+			{
+				"title": "Encanto Roca del Mar",
+				"lat": 23.268605,
+				"lng": -106.444921
+			},
+			{
+				"title": "Encanto",
+				"lat": 23.2284341,
+				"lng": -106.4352091
+			}
+		]
 	},
 	{
 		"id": 6,
@@ -499,10 +559,31 @@ export const DataList = [
 			"Terraza",
 			"Total",
 		],
-		"croquis": Room.src
+		"croquis": Room.src,
+		"location": [
+			{
+				"title": "Encanto Roca del Mar",
+				"lat": 23.268605,
+				"lng": -106.444921
+			},
+			{
+				"title": "Encanto",
+				"lat": 23.2284341,
+				"lng": -106.4352091
+			}
+		]
 	},
 ]
 
 export const formatPrice = (price: number) => {
 	return `$${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 };
+
+export const DataZones = [
+	'Centro',
+	'Puerto',
+	'Norte',
+	'Sur',
+	'Zona Comercial',
+	'Alrededores'
+]

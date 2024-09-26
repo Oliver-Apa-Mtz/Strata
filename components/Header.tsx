@@ -47,7 +47,7 @@ const Header = () => {
 							Nosotros
 						</Link>
 						<Link
-							href="/propiedades"
+							href="/propiedades/all"
 							className={`header__nav__item cursor-pointer flex items-center ${pathname === '/propiedades' || pathname.includes('propiedad') ? 'active' : ''}`}>
 							Propiedades
 						</Link>
@@ -95,7 +95,7 @@ const Header = () => {
 						Nosotros
 					</Link>
 					<Link
-						href="/propiedades"
+						href="/propiedades/all"
 						className="header__nav__movil__item cursor-pointer w-full p-3 block"
 						onClick={() => setIsMenuOpen(false)}>
 						Propiedades

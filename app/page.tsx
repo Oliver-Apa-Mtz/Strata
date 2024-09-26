@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useSpring, animated } from '@react-spring/web';
+import { DataList } from '../utils/data';
 
 import '../styles/home.css';
 import Button from '../components/Button';
@@ -12,12 +13,14 @@ const BannerToCall = dynamic(() => import('../components/BannerToCall'), {
 const PropertyItem = dynamic(() => import('../components/PropertyItem'), {
 	ssr: true,
 });
+const MapComponent = dynamic(() => import('../components/Map'), {
+	ssr: false,
+});
 
 import BannerEffect1 from '../assets/img/line-effect-1.webp';
 import ImageBanner1 from '../assets/img/image-post-1.webp';
 import LogoAmpi from '../assets/img/icono-ampi.svg';
 import BannerCall1 from '../assets/img/banner-call-1.webp';
-import Mapa from '../assets/img/map.webp';
 
 //Propiedades
 import Property1 from '../assets/img/property-1.webp';
@@ -258,7 +261,9 @@ export default function Home() {
 			</div>
 
 			<div className="banner-map">
-				<Image src={Mapa} alt="Ubica nuestras propiedades" className='' />
+				<div className=''>
+					<MapComponent dataPin={DataList[0].location || []} />
+				</div>
 			</div>
 
 			<div className='banner-gray py-20'>
@@ -280,6 +285,7 @@ export default function Home() {
 									image={Property7.src}
 									zone={'Centro'}
 									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									toLinkZone={true}
 								/>
 							</div>
 							<div className='banner-data__item mb-6'>
@@ -287,6 +293,7 @@ export default function Home() {
 									image={Property8.src}
 									zone={'Puerto'}
 									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									toLinkZone={true}
 								/>
 							</div>
 							<div className='banner-data__item mb-6'>
@@ -294,6 +301,7 @@ export default function Home() {
 									image={Property9.src}
 									zone={'Norte'}
 									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									toLinkZone={true}
 								/>
 							</div>
 							<div className='banner-data__item mb-6'>
@@ -301,13 +309,15 @@ export default function Home() {
 									image={Property10.src}
 									zone={'Sur'}
 									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									toLinkZone={true}
 								/>
 							</div>
 							<div className='banner-data__item mb-6'>
 								<PropertyItem
 									image={Property11.src}
-									zone={'Zona comercial'}
+									zone={'Zona Comercial'}
 									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									toLinkZone={true}
 								/>
 							</div>
 							<div className='banner-data__item mb-6'>
@@ -315,6 +325,7 @@ export default function Home() {
 									image={Property12.src}
 									zone={'Alrededores'}
 									info={'Av del Mar 656, Tellería, 82017 Mazatlán, Sin'}
+									toLinkZone={true}
 								/>
 							</div>
 						</div>

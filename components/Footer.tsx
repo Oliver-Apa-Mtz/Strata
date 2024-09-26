@@ -65,7 +65,7 @@ const Footer = () => {
 						Nosotros
 					</Link>
 					<Link
-						href="/propiedades"
+						href="/propiedades/all"
 						className="footer__nav__item cursor-pointer flex items-center">
 						Propiedades
 					</Link>

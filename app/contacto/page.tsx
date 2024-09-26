@@ -10,7 +10,6 @@ const Form = dynamic(() => import('../../components/Form'), {
 	ssr: false,
 });
 
-import ImageBanner1 from '../../assets/img/mapa-small.webp';
 import IconoPhone from '../../assets/img/icono-phone-footer.webp';
 import IconoPin from '../../assets/img/icono-pin-footer.webp';
 import IconoCall from '../../assets/img/icono-call-footer.webp';
@@ -72,7 +71,9 @@ const Contacto = () => {
 							</div>
 						</div>
 						<div className='banner-info__images lg:basis-1/2 basis-full lg:mt-0 mt-10'>
-							<Image src={ImageBanner1} alt="Cómo encontrarnos" className='banner-info__images__item lg:mx-0 mx-auto' />
+							<div className='lg:mx-0 mx-auto'>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1427.8592217337173!2d-106.4449213644111!3d23.2686053070682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c7f63971a93093%3A0x71b4ba53d1d022e3!2sProperty%20by%20Strata!5e0!3m2!1ses-419!2smx!4v1727315162168!5m2!1ses-419!2smx" width="100%" height="500" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+							</div>
 						</div>
 					</div>
 					<Form />

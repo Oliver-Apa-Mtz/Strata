@@ -15,6 +15,9 @@ const PropertyItem = dynamic(() => import('../../../components/PropertyItem'), {
 const Form = dynamic(() => import('../../../components/Form'), {
 	ssr: false,
 });
+const MapComponent = dynamic(() => import('../../../components/Map'), {
+	ssr: false,
+});
 
 import Interior from '../../../assets/img/mockPropiedad/icon-interior.svg';
 import Terraza from '../../../assets/img/mockPropiedad/icon-terraza.svg';
@@ -24,7 +27,6 @@ import Property1 from '../../../assets/img/property-13.webp';
 import Property2 from '../../../assets/img/property-14.webp';
 import Property3 from '../../../assets/img/property-15.webp';
 
-import Mapa from '../../../assets/img/map.webp';
 import Arrow from '../../../assets/img/arrow.svg'
 
 const Propiedad = () => {
@@ -273,7 +275,9 @@ const Propiedad = () => {
 			</div>
 
 			<div className="banner-map sm:mb-0 -mb-20">
-				<Image src={Mapa} alt="Ubica nuestras propiedades" className='' />
+				<div className=''>
+					<MapComponent dataPin={propiedad.location} />
+				</div>
 			</div>
 
 			<Form />

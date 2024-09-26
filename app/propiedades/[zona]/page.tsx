@@ -3,15 +3,16 @@ import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { setProperties } from '../../store/propertiesSlice';
+import { setProperties } from '../../../store/propertiesSlice';
 import { useSpring, animated } from '@react-spring/web';
+import { useParams } from 'next/navigation';
 
-import { DataList, formatPrice } from '../../utils/data';
-import '../../styles/home.css';
-const PropertyItem = dynamic(() => import('../../components/PropertyItem'), {
+import { DataList, formatPrice, DataZones } from '../../../utils/data';
+import '../../../styles/home.css';
+const PropertyItem = dynamic(() => import('../../../components/PropertyItem'), {
 	ssr: true,
 });
-const SkeletonPropertyItem = dynamic(() => import('../../components/SkeletonPropertyItem'), {
+const SkeletonPropertyItem = dynamic(() => import('../../../components/SkeletonPropertyItem'), {
 	ssr: true,
 });
 
@@ -24,6 +25,8 @@ const Propiedades = () => {
 	const [filteredProperties, setFilteredProperties] = useState<any[]>(propiedades);
 	const [selectedZone, setSelectedZone] = useState<string | null>(null);
 	const [selectedPriceRange, setSelectedPriceRange] = useState<string | null>(null);
+
+	const params = useParams();
 
 	const animationPropsBanner1 = useSpring({
 		opacity: isVisible ? 1 : 0,
@@ -76,6 +79,12 @@ const Propiedades = () => {
 			dispatch(setProperties(properties));
 		};
 		fetchData();
+		const { zona } = params;
+		if (zona.length > 0 && zona !== 'all') {
+			const zonaParse = zona !== 'Comercial' ? zona : 'Zona Comercial'
+			setSelectedZone(String(zonaParse));
+			setIsVisible(true);
+		}
 	}, []);
 
 	useEffect(() => {
@@ -121,21 +130,14 @@ const Propiedades = () => {
 										<p>Filtrar por zona</p>
 										<div className='banner-listado__arrow'></div>
 										<div className='banner-listado__list'>
-											<div
-												className='banner-listado__list__item'
-												onClick={() => handleZoneFilter('Centro')}>
-												Centro
-											</div>
-											<div
-												className='banner-listado__list__item'
-												onClick={() => handleZoneFilter('Norte')}>
-												Norte
-											</div>
-											<div
-												className='banner-listado__list__item'
-												onClick={() => handleZoneFilter('Sur')}>
-												Sur
-											</div>
+											{DataZones.map((zone, index) => (
+												<div
+													key={index}
+													className='banner-listado__list__item'
+													onClick={() => handleZoneFilter(zone)}>
+													{zone}
+												</div>
+											))}
 											<div
 												className='banner-listado__list__item'
 												onClick={() => handleZoneFilter('')}>

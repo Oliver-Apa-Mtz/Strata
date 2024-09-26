@@ -17,12 +17,19 @@ interface IProp {
 	zone?: string;
 	id?: number
 	small?: boolean;
+	toLinkZone?: boolean;
 }
 
-const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone, id, small }: IProp) => {
+const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone, id, small, toLinkZone }: IProp) => {
 	const router = useRouter();
+
 	const handleProductClick = (id: number) => {
 		router.push(`/propiedad/${id}`);
+	};
+
+	const handleZoneClick = (zone: string) => {
+		const zoneParse = zone !== 'Zona Comercial' ? zone : 'Comercial'
+		router.push(`/propiedades/${zoneParse}`);
 	};
 
 	return (
@@ -31,6 +38,9 @@ const PropertyItem = ({ image, type, price, title, info, rooms, bathrooms, zone,
 			onClick={() => {
 				if (id) {
 					handleProductClick(id);
+				}
+				if (toLinkZone && zone) {
+					handleZoneClick(zone);
 				}
 			}}
 		>

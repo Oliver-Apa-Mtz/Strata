@@ -19,9 +19,15 @@ const MapComponent = dynamic(() => import('../../../components/Map'), {
 	ssr: false,
 });
 
-import Interior from '../../../assets/img/mockPropiedad/icon-interior.svg';
-import Terraza from '../../../assets/img/mockPropiedad/icon-terraza.svg';
-import Total from '../../../assets/img/mockPropiedad/icon-total.svg';
+import Fogata from '../../../assets/img/mockPropiedad/icon-fogata.svg';
+import Gym from '../../../assets/img/mockPropiedad/icon-gym.svg';
+import Caminar from '../../../assets/img/mockPropiedad/icon-walk.svg';
+import Bike from '../../../assets/img/mockPropiedad/icon-bike.svg';
+import Mesa from '../../../assets/img/mockPropiedad/icon-mesa.svg';
+import Jardin from '../../../assets/img/mockPropiedad/icon-jardin.svg';
+import Alberca from '../../../assets/img/mockPropiedad/icon-alberca.svg';
+import Jacuzi from '../../../assets/img/mockPropiedad/icon-jacuzi.svg';
+import Bosque from '../../../assets/img/mockPropiedad/icon-bosque.svg';
 
 import Property1 from '../../../assets/img/property-13.webp';
 import Property2 from '../../../assets/img/property-14.webp';
@@ -37,9 +43,15 @@ const Propiedad = () => {
 	const { id } = params;
 
 	const featureImages: Record<string, any> = {
-		Interior: Interior,
-		Terraza: Terraza,
-		Total: Total,
+		Fogata: Fogata,
+		Gym: Gym,
+		Caminar: Caminar,
+		Bicicleta: Bike,
+		Mesa: Mesa,
+		Jardin: Jardin,
+		Alberca: Alberca,
+		Jacuzi: Jacuzi,
+		Bosque: Bosque,
 	};
 
 	useEffect(() => {
@@ -181,7 +193,9 @@ const Propiedad = () => {
 						<div className='flex flex-wrap'>
 							{propiedad?.features?.map((item: any, id: number) => (
 								<div className='flex items-center mb-4 gap-4 lg:w-[25%] md:w-[33%] w-[50%]' key={'feature' + id}>
-									<Image src={featureImages[item]} alt={item} className='w-[30px]' />
+									<div className='w-[30px]'>
+										<Image src={featureImages[item]} alt={item} className='h-auto max-h-[30px] w-auto max-w-[30px]' />
+									</div>
 									<p className='banner-info__text__text'>{item}</p>
 								</div>
 							))}
@@ -195,7 +209,9 @@ const Propiedad = () => {
 						<div className='flex flex-wrap'>
 							{propiedad?.amenidades?.map((item: any, id: number) => (
 								<div className='flex items-center mb-4 gap-4 lg:w-[25%] md:w-[33%] w-[50%]' key={'feature' + id}>
-									<Image src={featureImages[item]} alt={item} className='w-[30px]' />
+									<div className='w-[30px]'>
+										<Image src={featureImages[item]} alt={item} className='h-auto max-h-[30px] w-auto max-w-[30px]' />
+									</div>
 									<p className='banner-info__text__text'>{item}</p>
 								</div>
 							))}
